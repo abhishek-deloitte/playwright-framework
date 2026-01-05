@@ -54,6 +54,7 @@ npm run report
 ```
 self-healing-locator/
 ├── Documentation/           # 📚 All documentation files
+│   ├── INDEX.md            # Documentation navigation guide
 │   ├── README.md           # Complete framework guide
 │   ├── SAUCEDEMO_GUIDE.md  # SauceDemo testing guide
 │   ├── QUICKSTART.md       # Quick start guide
@@ -63,16 +64,36 @@ self-healing-locator/
 │   └── SETUP_COMPLETE.md   # Setup summary
 ├── src/
 │   ├── features/           # BDD feature files
+│   │   ├── login.feature
+│   │   ├── shopping.feature
+│   │   └── inventory.feature
 │   ├── pages/              # Page Object Models
+│   │   ├── BasePage.js
+│   │   ├── LoginPage.js
+│   │   ├── InventoryPage.js
+│   │   ├── CartPage.js
+│   │   └── CheckoutPage.js
 │   ├── steps/              # Step definitions
+│   │   ├── loginSteps.js
+│   │   ├── shoppingSteps.js
+│   │   ├── inventorySteps.js
+│   │   └── commonSteps.js
 │   ├── support/            # Hooks and World
+│   │   ├── hooks.js
+│   │   └── world.js
 │   ├── utils/              # Helper utilities
+│   │   ├── logger.js
+│   │   ├── helpers.js
+│   │   ├── waitStrategy.js
+│   │   └── assertionHelper.js
 │   └── config/             # Test configuration
+│       └── testData.js
 ├── test-results/           # Test reports and evidence
 ├── logs/                   # Test execution logs
 ├── .github/workflows/      # CI/CD pipeline
 ├── package.json            # Dependencies and scripts
-└── cucumber.js             # Cucumber configuration
+├── cucumber.js             # Cucumber configuration
+└── .env                    # Environment configuration
 ```
 
 ## 🧪 Running Tests
@@ -120,6 +141,7 @@ Comprehensive documentation is available in the **`Documentation/`** folder:
 
 | Document | Description |
 |----------|-------------|
+| **[INDEX.md](Documentation/INDEX.md)** | Documentation navigation guide |
 | **[README.md](Documentation/README.md)** | Complete framework documentation |
 | **[SAUCEDEMO_GUIDE.md](Documentation/SAUCEDEMO_GUIDE.md)** | SauceDemo-specific testing guide |
 | **[QUICKSTART.md](Documentation/QUICKSTART.md)** | Get started in 5 minutes |
@@ -273,7 +295,7 @@ Organize and filter tests using tags:
 - **Total Scenarios:** 35+
 - **Feature Files:** 3
 - **Page Objects:** 4
-- **Step Definitions:** 3 files
+- **Step Definitions:** 4 files
 - **Test Users:** 4
 - **Products Tested:** 6
 
@@ -295,6 +317,7 @@ ISC
 ## 📞 Support
 
 For detailed guides and documentation, check the **`Documentation/`** folder:
+- [Documentation Index](Documentation/INDEX.md)
 - [Complete Framework Guide](Documentation/README.md)
 - [SauceDemo Testing Guide](Documentation/SAUCEDEMO_GUIDE.md)
 - [Quick Start Guide](Documentation/QUICKSTART.md)
@@ -325,7 +348,3 @@ Expected: ✅ Tests pass successfully with detailed HTML report
 **Last Updated:** January 5, 2026
 
 **Happy Testing! 🎭**
-
-#   p l a y w r i g h t - f r a m e w o r k 
- 
- 
