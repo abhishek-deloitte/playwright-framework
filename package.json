@@ -1,0 +1,38 @@
+{
+  "name": "playwright-bdd-framework",
+  "version": "1.0.0",
+  "description": "Playwright framework with BDD using Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:chrome": "cucumber-js --profile chrome",
+    "test:firefox": "cucumber-js --profile firefox",
+    "test:webkit": "cucumber-js --profile webkit",
+    "test:headed": "cucumber-js --profile headed",
+    "test:tag": "cucumber-js --tags",
+    "report": "node src/reports/generate-report.js",
+    "clean": "rimraf test-results allure-results allure-report"
+  },
+  "keywords": [
+    "playwright",
+    "bdd",
+    "cucumber",
+    "testing",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.3.1",
+    "@playwright/test": "^1.40.1",
+    "allure-commandline": "^2.25.0",
+    "cucumber-html-reporter": "^7.1.1",
+    "dotenv": "^16.3.1",
+    "multiple-cucumber-html-reporter": "^3.5.0",
+    "rimraf": "^5.0.5"
+  },
+  "dependencies": {
+    "winston": "^3.11.0"
+  }
+}
+

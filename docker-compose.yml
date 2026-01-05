@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  playwright-tests:
+    image: mcr.microsoft.com/playwright:v1.40.1-focal
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - BROWSER=${BROWSER:-chromium}
+      - HEADLESS=${HEADLESS:-true}
+      - BASE_URL=${BASE_URL:-https://www.example.com}
+      - ENV=${ENV:-qa}
+    command: >
+      sh -c "npm install && npm test"
+    networks:
+      - test-network
+
+networks:
+  test-network:
+    driver: bridge
+
